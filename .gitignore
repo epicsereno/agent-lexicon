@@ -13,6 +13,4 @@ dist
 screenshots
 .node_modules.tmp*
 .node_modules.lock
-routeTree.gen.ts
-src/routeTree.gen.ts
 AGENTS.md

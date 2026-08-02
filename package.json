@@ -1,5 +1,5 @@
 {
-  "name": "app-builder-workspace",
+  "name": "agent-lexicon",
   "private": true,
   "sideEffects": false,
   "type": "module",
@@ -14,7 +14,8 @@
     "preview": "vite preview --host 0.0.0.0 --port 8080",
     "typecheck": "tsc --noEmit",
     "lint": "eslint .",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "ci": "npm run typecheck && npm run lint && npm run build"
   },
   "dependencies": {
     "@electric-sql/pglite": "^0.5.3",
@@ -88,6 +89,8 @@
     "typescript": "^5.7.0",
     "typescript-eslint": "^8.56.1",
     "vite": "^8.1.0"
+  },
+  "engines": {
+    "node": ">=22"
   }
 }
-

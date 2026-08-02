@@ -1,5 +1,7 @@
 # Agent Lexicon
 
+[![CI](https://github.com/epicsereno/agent-lexicon/actions/workflows/ci.yml/badge.svg)](https://github.com/epicsereno/agent-lexicon/actions/workflows/ci.yml)
+
 Field codex of codenamed agents mapped to real engineering positions — **Iron Man**, **R2-D2**, **Neo** (Matrix), Joker, Vader, and the rest of the shipping crew.
 
 ## Features
@@ -17,7 +19,7 @@ Field codex of codenamed agents mapped to real engineering positions — **Iron 
 - TanStack Start / Router
 - Tailwind CSS v4
 - Vite 8
-- Zustand-ready, Zod, Lucide icons
+- Node 22
 
 ## Develop
 
@@ -30,8 +32,20 @@ App listens on `http://0.0.0.0:8080`.
 
 ```bash
 npm run typecheck
+npm run lint
 npm run build
+# or the full CI suite locally:
+npm run ci
 ```
+
+## CI
+
+GitHub Actions runs on every push and pull request to `main`:
+
+1. `npm ci`
+2. Typecheck (`tsc --noEmit`)
+3. Lint (ESLint)
+4. Production build (`vite build`)
 
 ## Note
 
